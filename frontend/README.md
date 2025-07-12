@@ -285,6 +285,16 @@ export const websiteAPI = {
   deleteWebsite: async (id: string): Promise<void> => {
     await api.delete(`/websites/${id}`);
   },
+  
+  bulkDeleteWebsites: async (ids: string[]): Promise<void> => {
+    const intIds = ids.map(id => parseInt(id, 10));
+    await api.post('/websites/bulk-delete', { ids: intIds });
+  },
+  
+  bulkStartAnalysis: async (ids: string[]): Promise<void> => {
+    const intIds = ids.map(id => parseInt(id, 10));
+    await api.post('/websites/bulk-start', { ids: intIds });
+  },
 };
 ```
 
@@ -292,6 +302,7 @@ The API service:
 - Maps backend data to frontend types
 - Handles authentication headers
 - Provides methods for all API operations
+- Implements both individual and bulk operations for improved performance
 
 ## UI Components
 
