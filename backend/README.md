@@ -314,5 +314,3 @@ Some optimization techniques I used:
 - **Rate limiting** to prevent abuse of the API
 - **Pagination** for large datasets
 - **Database indexes** on frequently queried fields
-
-Future improvements could include caching common results and implementing a more sophisticated crawler that respects robots.txt.

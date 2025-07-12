@@ -138,4 +138,4 @@ The app works great on all devices:
 
 ## License
 
-[MIT License](LICENSE) - Feel free to use and modify as needed!
+[MIT License](LICENSE)
