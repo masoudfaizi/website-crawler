@@ -39,6 +39,13 @@ export function AddUrlDialog({
       return;
     }
     
+    // Check for trailing slash
+    if (value.endsWith('/')) {
+      setError('URL should not end with a trailing slash (/)');
+      setIsValid(false);
+      return;
+    }
+    
     try {
       new URL(value);
       // Check for http or https protocol
